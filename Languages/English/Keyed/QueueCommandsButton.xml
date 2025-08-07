@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <Merthsoft.QueueCommandsButton.SettingsCategory>Queue Commands Button</Merthsoft.QueueCommandsButton.SettingsCategory>
+
+  <Merthsoft.QueueCommandsButton.QueueCommandsLabel>Queue Commands</Merthsoft.QueueCommandsButton.QueueCommandsLabel>
+  <Merthsoft.QueueCommandsButton.QueueCommandsDescription>Toggle queuing commands (like shift-clicking).</Merthsoft.QueueCommandsButton.QueueCommandsDescription>
+
+  <Merthsoft.QueueCommandsButton.QueueCommandButtonLocation>Button location:</Merthsoft.QueueCommandsButton.QueueCommandButtonLocation>
+  <Merthsoft.QueueCommandsButton.QueueCommandButtonLocation.PawnGizmoGlobal>Pawn gizmo (global toggle)</Merthsoft.QueueCommandsButton.QueueCommandButtonLocation.PawnGizmoGlobal>
+  <Merthsoft.QueueCommandsButton.QueueCommandButtonLocation.PawnGizmoPerPawn>Pawn gizmo (per pawn)</Merthsoft.QueueCommandsButton.QueueCommandButtonLocation.PawnGizmoPerPawn>
+  <Merthsoft.QueueCommandsButton.QueueCommandButtonLocation.GameSettings>Play settings (bottom right)</Merthsoft.QueueCommandsButton.QueueCommandButtonLocation.GameSettings>
+  <Merthsoft.QueueCommandsButton.QueueCommandButtonLocation.WorkTab>Work tab</Merthsoft.QueueCommandsButton.QueueCommandButtonLocation.WorkTab>
+</LanguageData>

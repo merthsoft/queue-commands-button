@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ModMetaData>
+  <name>Queue Commands Button</name>
+  <author>merthsoft</author>
+  <packageId>Merthsoft.QueueCommandsButton</packageId>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <description>Adds a new gizmo for colonists to queue commands.</description>
+</ModMetaData>
