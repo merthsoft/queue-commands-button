@@ -14,20 +14,22 @@ public static class Pawn_GetGizmos
         foreach (var g in __result)
             yield return g;
 
-        if ((QueueCommandsButtonMod.QueueCommandButtonLocation == QueueCommandButtonLocation.PawnGizmoGlobal)
-            || (QueueCommandsButtonMod.QueueCommandButtonLocation == QueueCommandButtonLocation.PawnGizmoPerPawn))
+        if (QueueCommandsButtonMod.QueueCommandButtonLocation != QueueCommandButtonLocation.PawnGizmoGlobal
+            && QueueCommandsButtonMod.QueueCommandButtonLocation != QueueCommandButtonLocation.PawnGizmoPerPawn)
         {
-            if (__instance.IsColonistPlayerControlled)
+            yield break;
+        }
+
+        if (__instance.IsColonistPlayerControlled)
+        {
+            yield return new Command_Toggle
             {
-                yield return new Command_Toggle
-                {
-                    defaultLabel = "Merthsoft.QueueCommandsButton.QueueCommandsLabel".Translate(),
-                    defaultDesc = "Merthsoft.QueueCommandsButton.QueueCommandsDescription".Translate(),
-                    isActive = () => QueueCommandsButtonMod.IsEnabled(__instance),
-                    toggleAction = () => QueueCommandsButtonMod.Toggle(__instance),
-                    icon = QueueCommandsButtonMod.QueueIcon,
-                };
-            }
+                defaultLabel = "Merthsoft.QueueCommandsButton.QueueCommandsLabel".Translate(),
+                defaultDesc = "Merthsoft.QueueCommandsButton.QueueCommandsDescription".Translate(),
+                isActive = () => QueueCommandsButtonMod.IsEnabled(__instance),
+                toggleAction = () => QueueCommandsButtonMod.Toggle(__instance),
+                icon = QueueCommandsButtonMod.QueueIcon,
+            };
         }
     }
 }

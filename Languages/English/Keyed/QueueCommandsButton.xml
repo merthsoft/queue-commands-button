@@ -10,4 +10,8 @@
   <Merthsoft.QueueCommandsButton.QueueCommandButtonLocation.PawnGizmoPerPawn>Pawn gizmo (per pawn)</Merthsoft.QueueCommandsButton.QueueCommandButtonLocation.PawnGizmoPerPawn>
   <Merthsoft.QueueCommandsButton.QueueCommandButtonLocation.GameSettings>Play settings (bottom right)</Merthsoft.QueueCommandsButton.QueueCommandButtonLocation.GameSettings>
   <Merthsoft.QueueCommandsButton.QueueCommandButtonLocation.WorkTab>Work tab</Merthsoft.QueueCommandsButton.QueueCommandButtonLocation.WorkTab>
+  <Merthsoft.QueueCommandsButton.QueueCommandButtonLocation.FloatMenu>Float menu (right click)</Merthsoft.QueueCommandsButton.QueueCommandButtonLocation.FloatMenu>
+  <Merthsoft.QueueCommandsButton.QueueCommandButtonLocation.PawnCardGlobal>Pawn card (global)</Merthsoft.QueueCommandsButton.QueueCommandButtonLocation.PawnCardGlobal>
+  <Merthsoft.QueueCommandsButton.QueueCommandButtonLocation.PawnCardPerPawn>Pawn card (per pawn)</Merthsoft.QueueCommandsButton.QueueCommandButtonLocation.PawnCardPerPawn>
+
 </LanguageData>

@@ -1,6 +1,7 @@
 using HarmonyLib;
 using RimWorld;
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using Verse;
 using Verse.Sound;
@@ -10,7 +11,7 @@ namespace Merthsoft.QueueCommandsButton.Patches;
 [HarmonyPatch(typeof(MainTabWindow_Work), "DoManualPrioritiesCheckbox")]
 public static class MainTabWindow_Work_DoManualPrioritiesCheckbox
 {
-    static readonly Rect toggleRect = new(155f, 5f, 200f, 30f);
+    static readonly Rect toggleRect = new(155f, 5f, 150f, 30f);
 
     public static void Postfix()
     {

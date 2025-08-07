@@ -7,5 +7,8 @@ public enum QueueCommandButtonLocation
     PawnGizmoGlobal,
     PawnGizmoPerPawn,
     GameSettings,
-    WorkTab
+    WorkTab,
+    FloatMenu,
+    PawnCardGlobal,
+    PawnCardPerPawn,
 }

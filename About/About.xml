@@ -6,5 +6,15 @@
   <supportedVersions>
     <li>1.6</li>
   </supportedVersions>
+	<modDependenciesByVersion>
+    <v1.6>
+			<li>
+				<packageId>brrainz.harmony</packageId>
+				<displayName>Harmony</displayName>
+				<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077</steamWorkshopUrl>
+			</li>
+		</v1.6>
+	</modDependenciesByVersion>
   <description>Adds a new gizmo for colonists to queue commands.</description>
+	<modIconPath IgnoreIfNoMatchingField="True">queue</modIconPath>
 </ModMetaData>

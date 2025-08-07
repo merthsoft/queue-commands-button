@@ -22,26 +22,6 @@ public class QueueCommandsButtonMod : Mod
 
     public static QueueCommandButtonLocation QueueCommandButtonLocation => Settings.QueueCommandButtonLocation;
 
-    public static bool IsEnabled(Pawn p)
-        => QueueCommandButtonLocation switch
-        {
-            QueueCommandButtonLocation.PawnGizmoPerPawn => isEnabledDictionary.GetOrSet(p, false),
-            _ => isEnabledGlobal,
-        };
-
-    public static void SetEnabled(Pawn p, bool value)
-    {
-        switch (QueueCommandButtonLocation)
-        {
-            case QueueCommandButtonLocation.PawnGizmoPerPawn:
-                isEnabledDictionary[p] = value;
-                break;
-            default:
-                isEnabledGlobal = value;
-                break;
-        }
-    }
-
     public QueueCommandsButtonMod(ModContentPack content) : base(content)
     {
         Settings = GetSettings<QueueCommandsButtonModSettings>();
@@ -52,7 +32,34 @@ public class QueueCommandsButtonMod : Mod
         LongEventHandler.ExecuteWhenFinished(() =>
         {
             QueueCommandsButtonMod.QueueIcon = ContentFinder<Texture2D>.Get("queue");
+
+            foreach (var method in Harmony.GetAllPatchedMethods())
+                Log.Message($"Patched: {method.DeclaringType?.FullName}.{method.Name}");
         });
+    }
+
+    public static bool IsEnabled(Pawn p)
+        => QueueCommandButtonLocation switch
+        {
+            QueueCommandButtonLocation.PawnGizmoPerPawn => isEnabledDictionary.GetOrSet(p, false),
+            QueueCommandButtonLocation.PawnCardPerPawn => isEnabledDictionary.GetOrSet(p, false),
+            _ => isEnabledGlobal,
+        };
+
+    public static void SetEnabled(Pawn p, bool value)
+    {
+        switch (QueueCommandButtonLocation)
+        {
+            case QueueCommandButtonLocation.PawnGizmoPerPawn:
+                isEnabledDictionary[p] = value;
+                break;
+            case QueueCommandButtonLocation.PawnCardPerPawn:
+                isEnabledDictionary[p] = value;
+                break;
+            default:
+                isEnabledGlobal = value;
+                break;
+        }
     }
 
     public override string SettingsCategory()
