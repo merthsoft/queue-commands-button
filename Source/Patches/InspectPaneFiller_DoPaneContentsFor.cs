@@ -19,12 +19,12 @@ public static class InspectPaneFiller_DoPaneContentsFor
             return;
 
         var row = new WidgetRow(rect.x + rect.width - 26, rect.y + rect.height - 26);
-        var enabled = QueueCommandsButtonMod.IsEnabled(null);
+        var enabled = QueueCommandsButtonMod.IsEnabled(pawn);
         row.ToggleableIcon(
             toggleable: ref enabled,
             tex: QueueCommandsButtonMod.QueueIcon,
             tooltip: "Merthsoft.QueueCommandsButton.QueueCommandsDescription".Translate());
 
-        QueueCommandsButtonMod.SetEnabled(null, enabled);
+        QueueCommandsButtonMod.SetEnabled(pawn, enabled);
     }
 }
